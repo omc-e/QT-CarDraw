@@ -2,6 +2,9 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include <QPainter>
+#include <QPixmap>
+#include <QDebug>
 
 namespace Ui {
 class Widget;
@@ -17,6 +20,10 @@ public:
 
 private:
     Ui::Widget *ui;
+
+    // QWidget paint event za intevfejs
+protected:
+    void paintEvent(QPaintEvent *event) override;
 };
 
 #endif // WIDGET_H
