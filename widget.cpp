@@ -51,6 +51,35 @@ void Widget::paintEvent(QPaintEvent *event)
     painter.fillPath(spath, Qt::red);
     painter.drawPath(spath);
 
+    //prozor1
+    QPainterPath p1;
+    p1.moveTo(310,130);
+    p1.arcTo(QRectF(310,50,182,170),175,-81);
+    p1.lineTo(395,130);
+    p1.lineTo(310,130);
+    painter.fillPath(p1,Qt::blue);
+    painter.drawPath(p1);
+
+    QPainterPath p2;
+    p2.moveTo(405,130);
+    p2.arcTo(QRectF(310,50,182,170),3,84);
+    p2.lineTo(405,130);
+    painter.fillPath(p2,Qt::blue);
+    painter.drawPath(p2);
+
+    //Gume
+    painter.setBrush(Qt::gray);
+    painter.drawEllipse(300,165,70,70);
+    painter.drawEllipse(480,165,70,70);
+    painter.setBrush(Qt::black);
+    painter.drawEllipse(310,175,50,50);
+    painter.drawEllipse(490,175,50,50);
+   // painter.setBrush(Qt::gray);
+
+    //painter.setBrush(Qt::black);
+
+
+    painter.end();
 
 
 
